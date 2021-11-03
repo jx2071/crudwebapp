@@ -12,14 +12,11 @@
 </div>
 {{/if}}
 <br>
-<form class="row g-3 needs-validation" method="POST" action="/addrecord" novalidate>
-
+<form class="row g-3 needs-validation form-floating" method="POST" action="/addrecord" novalidate>
     {{#each column_name}}
-    <div class="row mb-3">
-        <label class="col-sm-2 col-form-label">{{this}}</label>
-        <div class="col-sm-7">
-            <input type="email" class="form-control" name={{inc @index}}>
-        </div>
+    <div class="form-floating">
+        <input type="text" class="form-control" id="floatingInputValue" placeholder=" " name={{inc @index}}>
+        <label for="floatingInputValue">{{this}}</label>
     </div>
     {{/each}}
 

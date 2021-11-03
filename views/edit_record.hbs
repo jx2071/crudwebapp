@@ -1,0 +1,24 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edit Record</li>
+    </ol>
+</nav>
+<br>
+{{#if alert}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{alert}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+<br>
+
+{{{body}}}
+
+<div class="col-2 d-grid">
+    <button class="btn btn-secondary align-self-center" type="reset">Reset</button>
+</div>
+<div class="col-7 d-grid">
+    <button class="btn btn-primary align-self-center" type="submit">Update</button>
+</div>
+</form>

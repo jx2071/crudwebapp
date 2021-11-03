@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-6">
-        <h1>Table</h1>
+        <h1>Table '{{table_name}}'</h1>
     </div>
     <div class="col-6 d-flex justify-content-end">
         <a href="/addrecord" type="button" class="btn btn-primary align-self-center">+ Add Record</a>
@@ -21,12 +21,11 @@
         {{#each result}}
         <tr>
             {{#each this}}
-            <th scope="row">{{this}}</th>
+            <td scope="row">{{this}}</td>
             {{/each}}
             <td class="text-end">
-                <a href="#" type="button" class="btn btn-light btn-small"><i class="bi bi-eye"></i> View</a>
-                <a href="#" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"></i> Edit</a>
-                <a href="#" type="button" class="btn btn-light btn-small"><i class="bi bi-person-x"></i> Delete</a>
+                <a href="/editrecord/{{inc @index}}" type="button" class="btn btn-light btn-small"><i
+                        class="bi bi-pencil"></i> Edit</a>
             </td>
         </tr>
         {{/each}}
